@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.jlab.mi.mapper.EduMapper">
+
+	<!--
+	
+	<select id="findSawon" parameterType="String" resultType="com.jlab.mi.SawonDto">
+		select * from base_sawon
+		where name like '%'||#{name, jdbcType=VARCHAR}||'%'
+	</select>
+
+	<select id="readAllDepts" resultType="com.jlab.mi.PropDto">
+		select * from base_dept
+	</select>
+	<select id="readAllJikgups" resultType="com.jlab.mi.PropDto">
+		select * from base_jikgup
+	</select>
+	
+	<delete id="delete" parameterType="com.jlab.mi.SawonDto">
+		delete from base_sawon
+		where name = #{name}
+	</delete>
+	-->
+	<!-- 삽입 -->
+	<insert id="insert" parameterType="com.jlab.mi.SawonDto">
+		insert into base_sawon(name, sabun, dept, jikgup, sex, ipsa_date, marry, email, smemo)
+		values(
+			#{name},
+			#{sabun, jdbcType=VARCHAR},
+			#{dept, jdbcType=VARCHAR},
+			#{jikgup, jdbcType=VARCHAR},
+			#{sex, jdbcType=VARCHAR},
+			#{ipsa_date, jdbcType=VARCHAR},
+			#{marry, jdbcType=VARCHAR},
+			#{email, jdbcType=VARCHAR},
+			#{smemo, jdbcType=VARCHAR#
+		)
+	</insert>
+
+	<!-- 수정 -->
+	<update id="update" parameterType="com.jlab.mi.SawonDto">
+		update base_sawon set
+			sabun=#{sabun, jdbcType=VARCHAR},
+			dept=#{dept, jdbcType=VARCHAR},
+			jikgup=#{jikgup, jdbcType=VARCHAR},
+			sex=#{sex, jdbcType=VARCHAR},
+			ipsa_date=#{ipsa_date, jdbcType=VARCHAR},
+			marry=#{marry, jdbcType=VARCHAR},
+			email=#{email, jdbcType=VARCHAR},
+			smemo=#{smemo, jdbcType=VARCHAR}
+		where name = #{name}
+	</update>
+
+</mapper>
