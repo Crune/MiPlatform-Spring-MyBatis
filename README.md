@@ -1,4 +1,4 @@
-# MiPlatform-Spring-MyBatis
+# MiPlatform Sample with Spring 3.2 + MyBatis
 
 ## Information
 
