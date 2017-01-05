@@ -14,7 +14,7 @@
 	<!-- datasource 설정 -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
-		<property name="url" value="jdbc:oracle:thin:@118.219.52.29:1521:XE" />
+		<property name="url" value="jdbc:oracle:thin:@?.?.?.?:1521:XE" />
 		<property name="username" value="jlabsystem" />
 		<property name="password" value="1234" />
 	</bean>
